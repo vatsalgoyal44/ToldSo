@@ -26,7 +26,8 @@ describe("ToldSo", function () {
       const body = 'This is my first post'
 
       await toldSo.createPost(title, body)
-      const posts = 
+      const posts = await toldSo.getPostsByAuthor()
+      expect(posts[0]).to.equal(post)
     })
   })
   // async function deployOneYearLockFixture() {
