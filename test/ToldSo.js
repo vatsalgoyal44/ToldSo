@@ -19,7 +19,16 @@ describe("ToldSo", function () {
     return { owner, toldSo }
   }
 
+  describe("Create and read posts", function(){
+    it("Should create a post", async function(){
+      const { toldSo } = await loadFixture(deplyFixture)
+      const title = 'Hello World'
+      const body = 'This is my first post'
 
+      await toldSo.createPost(title, body)
+      const posts = 
+    })
+  })
   // async function deployOneYearLockFixture() {
   //   const ONE_YEAR_IN_SECS = 365 * 24 * 60 * 60;
   //   const ONE_GWEI = 1_000_000_000;
